@@ -1,0 +1,3 @@
+# Domains to block on every DNS server, in addition to each server's blocklists.
+# One domain per line; '#' starts a comment. Hosts-file lines (0.0.0.0 domain) are accepted.
+# Synced to Pi-hole (exact deny), AdGuard Home (||domain^) and NextDNS (denylist).

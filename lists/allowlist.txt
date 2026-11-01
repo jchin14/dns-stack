@@ -1,0 +1,3 @@
+# Domains that must never be blocked on any DNS server.
+# One domain per line; '#' starts a comment. Hosts-file lines (0.0.0.0 domain) are accepted.
+# Synced to Pi-hole (exact allow), AdGuard Home (@@||domain^) and NextDNS (allowlist).

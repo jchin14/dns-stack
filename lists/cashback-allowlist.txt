@@ -1,0 +1,18 @@
+# Affiliate / cashback tracking domains. Blocklists often catch these, which
+# breaks cashback sites and voucher links. Remove any you'd rather block.
+prf.hn                    # Partnerize
+awin1.com                 # Awin
+linksynergy.com           # Rakuten Advertising
+click.linksynergy.com
+anrdoezrs.net             # CJ Affiliate
+dpbolvw.net               # CJ Affiliate
+jdoqocy.com               # CJ Affiliate
+tkqlhce.com               # CJ Affiliate
+kqzyfj.com                # CJ Affiliate
+sjv.io                    # Impact
+pjtra.com                 # Pepperjam / Partnerize
+optimise.net              # Optimise Media
+impact.com                # Impact
+go.skimresources.com      # Skimlinks
+redirect.viglink.com      # Sovrn //Commerce (VigLink)
+shareasale.com            # ShareASale
