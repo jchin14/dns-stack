@@ -208,4 +208,8 @@ regex matched against the JSON field). Panels:
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+
+You're free to use, modify, and share it for personal, hobby, educational, research, and other **noncommercial** purposes. **Commercial use requires prior written permission** — contact Jonathan Chin via [GitHub](https://github.com/jchin14) to arrange a commercial license.
+
+Copies obtained before this change were released under the MIT License and remain MIT-licensed.
