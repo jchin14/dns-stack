@@ -89,7 +89,7 @@ def test_pihole_fetch_queries(mock, http, pihole_cfg):
             "status": "FORWARDED",
             "domain": "ok.example",
             "upstream": "1.1.1.1#53",
-            "reply": {"type": "IP", "time": 12.5},
+            "reply": {"type": "IP", "time": 0.0125},
             "client": {"ip": "10.0.0.3", "name": None},
         },
         {

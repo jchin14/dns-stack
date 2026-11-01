@@ -128,7 +128,9 @@ class PiholeClient:
             client_s = str(client)
         reply = q.get("reply") or {}
         rt = reply.get("time")
-        response_ms = float(rt) if isinstance(rt, (int, float)) and rt >= 0 else None
+        response_ms = (
+            round(float(rt) * 1000, 3) if isinstance(rt, (int, float)) and rt >= 0 else None
+        )  # API reports seconds
         status_raw = q.get("status") or "UNKNOWN"
         reason = status_raw
         if q.get("list_id") is not None:
