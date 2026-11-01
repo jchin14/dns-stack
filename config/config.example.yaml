@@ -1,0 +1,49 @@
+# dns-stack configuration. Copy to config/config.yaml.
+# Any string value may be ${ENV_VAR} or ${ENV_VAR:-default}; values are taken
+# from the environment at load time, so keep secrets in .env, not here.
+# Remove a server section entirely to disable that server.
+
+pihole:
+  name: pihole
+  url: ${PIHOLE_URL:-http://172.20.1.41}
+  password: ${PIHOLE_PASSWORD}
+  verify_tls: true
+  # ssh alias used by `dnsstack update --apply` to run `sudo pihole -up`.
+  # Leave empty to be told to update manually.
+  ssh_host: ${PIHOLE_SSH_HOST:-}
+
+adguard:
+  name: adguard
+  url: ${ADGUARD_URL:-http://172.20.1.42:3000}
+  username: ${ADGUARD_USERNAME:-admin}
+  password: ${ADGUARD_PASSWORD}
+  verify_tls: true
+
+nextdns:
+  name: nextdns
+  profile_id: ${NEXTDNS_PROFILE_ID}
+  api_key: ${NEXTDNS_API_KEY}
+  linked_ip_url: ${NEXTDNS_LINKED_IP_URL:-}
+
+lists:
+  # Paths are resolved relative to the current working directory
+  # (/app inside the container).
+  allowlist:
+    - lists/allowlist.txt
+    - lists/cashback-allowlist.txt
+  denylist:
+    - lists/denylist.txt
+  # false = only add missing entries; true = also remove server entries
+  # that are not in the files.
+  prune: false
+
+loki:
+  url: ${LOKI_URL:-http://loki:3100}
+  tenant: null
+
+collector:
+  poll_interval_s: 15
+  batch_size: 500
+  state_path: /data/state.json
+  health_port: 8080
+  lookback_minutes: 10
