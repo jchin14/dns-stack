@@ -4,11 +4,11 @@ Keep **Pi-hole v6** (Raspberry Pi), **AdGuard Home** (VM) and **NextDNS** (cloud
 in sync as redundant DNS resolvers, and pull all of their query logs into a
 single **Loki + Grafana** dashboard.
 
-- One set of allow/deny list files in git, pushed to all three servers.
-- One collector that polls each server's query log and ships it to Loki.
-- One Grafana dashboard: queries/min, blocked %, top blocked domains, top
-  clients, client -> server matrix, server health and a searchable query log.
-- Software updates for Pi-hole and AdGuard from one command.
+- **Lists:** one set of allow/deny files in git, pushed to all three servers.
+- **Logs:** a collector polls each server's query log and ships it to Loki.
+- **Dashboard:** queries/min, blocked %, top domains and clients, client ->
+  server matrix, server health and a searchable query log.
+- **Updates:** Pi-hole and AdGuard software updates from one command.
 
 ## Architecture
 
