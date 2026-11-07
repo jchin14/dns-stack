@@ -1,0 +1,9 @@
+version: 2
+updates:
+  - package-ecosystem: "pip docker github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      pip docker github-actions:
+        patterns: ["*"]
